@@ -1,0 +1,12 @@
+-mjwx
+-i C:\Users\Jummy\Downloads\MSXgl-1.5.0b\projects\antipiracyscreen/out/antipiracyscreen.ihx
+-b _CODE = 0x0100
+-b _DATA = 0x0000
+-k C:\Users\Jummy\Downloads\MSXgl-1.5.0b\tools/sdcc/lib/z80
+-k C:\Users\Jummy\Downloads\MSXgl-1.5.0b\tools/sdcc/bin\..\lib\z80
+-l C:\Users\Jummy\Downloads\MSXgl-1.5.0b\projects\antipiracyscreen/out/msxgl.lib
+-l z80
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\projects\antipiracyscreen/out/crt0_dos.rel
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\projects\antipiracyscreen/out/antipiracyscreen.rel
+
+-e

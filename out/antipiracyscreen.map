@@ -1,0 +1,605 @@
+ASxxxx Linker V05.50.4-SDLD,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           mul
+     00000000  _g_SUBRID                          bios
+     00000000  l__BSEG                         
+     00000000  l__BSS                          
+     00000000  l__CABS                         
+     00000000  l__DABS                         
+     00000000  l__GSFINAL                      
+     00000000  l__GSINIT                       
+     00000000  l__HEADER                       
+     00000000  l__HEADER0                      
+     00000000  l__HEAP                         
+     00000000  l__RODATA                       
+     00000000  s__CABS                         
+     00000000  s__DABS                         
+     00000000  s__HEADER                       
+     00000000  s__HEADER0                      
+     00000002  _g_STRSRC                          bios
+     00000004  _g_CGTABL                          system
+     00000006  _DOS_TPAUpperAddr                  system
+     00000006  _g_VDP_DR                          system
+     00000007  _g_VDP_DW                          system
+     0000000F  l__INITIALIZED                  
+     0000000F  l__INITIALIZER                  
+     0000002B  _g_BASRVN                          system
+     0000002B  _g_ROMVersion                      system
+     0000002D  _g_MSXVER                          system
+     0000002E  _g_MSXMID                          system
+     00000034  _g_CHAR_16                         system
+     00000100  s__CODE                         
+     00000222  l__HOME                         
+     00000883  l__DATA                         
+     00006B60  l__CODE                         
+     00006C60  s__HOME                         
+     00006E82  s__INITIALIZER                  
+     00006E82  s__RODATA                       
+     00006E91  s__DATA                         
+     00006E91  s__GSFINAL                      
+     00006E91  s__GSINIT                       
+     00007714  s__INITIALIZED                  
+     00007723  s__BSEG                         
+     00007723  s__BSS                          
+     00007723  s__HEAP                         
+     0000F30F  _g_KANJTABLE                       bios
+     0000F323  _g_DISKVE                          bios
+     0000F325  _g_BREAKV                          bios
+     0000F341  _g_RAMAD0                          bios
+     0000F342  _g_RAMAD1                          bios
+     0000F343  _g_RAMAD2                          bios
+     0000F344  _g_RAMAD3                          bios
+     0000F348  _g_MASTER                          bios
+ASxxxx Linker V05.50.4-SDLD,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     0000F37D  _g_BDOS                            bios
+     0000F380  _g_RDPRIM                          system
+     0000F385  _g_WRPRIM                          system
+     0000F38C  _g_CLPRIM                          system
+     0000F39A  _g_USRTAB                          system
+     0000F3AE  _g_LINL40                          system
+     0000F3AF  _g_LINL32                          system
+     0000F3B0  _g_LINLEN                          system
+     0000F3B1  _g_CRTCNT                          system
+     0000F3B2  _g_CLMLST                          system
+     0000F3B3  _g_TXTNAM                          system
+     0000F3B5  _g_TXTCOL                          system
+     0000F3B7  _g_TXTCGP                          system
+     0000F3B9  _g_TXTATR                          system
+     0000F3BB  _g_TXTPAT                          system
+     0000F3BD  _g_T32NAM                          system
+     0000F3BF  _g_T32COL                          system
+     0000F3C1  _g_T32CGP                          system
+     0000F3C3  _g_T32ATR                          system
+     0000F3C5  _g_T32PAT                          system
+     0000F3C7  _g_GRPNAM                          system
+     0000F3C9  _g_GRPCOL                          system
+     0000F3CB  _g_GRPCGP                          system
+     0000F3CD  _g_GRPATR                          system
+     0000F3CF  _g_GRPPAT                          system
+     0000F3D1  _g_MLTNAM                          system
+     0000F3D3  _g_MLTCOL                          system
+     0000F3D5  _g_MLTCGP                          system
+     0000F3D7  _g_MLTATR                          system
+     0000F3D9  _g_MLTPAT                          system
+     0000F3DB  _g_CLIKSW                          system
+     0000F3DC  _g_CSRY                            system
+     0000F3DD  _g_CSRX                            system
+     0000F3DE  _g_CNSDFG                          system
+     0000F3DF  _g_RG0SAV                          system
+     0000F3E0  _g_RG1SAV                          system
+     0000F3E1  _g_RG2SAV                          system
+     0000F3E2  _g_RG3SAV                          system
+     0000F3E3  _g_RG4SAV                          system
+     0000F3E4  _g_RG5SAV                          system
+     0000F3E5  _g_RG6SAV                          system
+     0000F3E6  _g_RG7SAV                          system
+     0000F3E7  _g_STATFL                          system
+     0000F3E8  _g_TRGFLG                          system
+     0000F3E9  _g_FORCLR                          system
+     0000F3EA  _g_BAKCLR                          system
+     0000F3EB  _g_BDRCLR                          system
+     0000F3EC  _g_MAXUPD                          system
+     0000F3EF  _g_MINUPD                          system
+     0000F3F2  _g_ATRBYT                          system
+     0000F3F3  _g_QUEUES                          system
+ASxxxx Linker V05.50.4-SDLD,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     0000F3F5  _g_FRCNEW                          system
+     0000F3F6  _g_SCNCNT                          system
+     0000F3F7  _g_REPCNT                          system
+     0000F3F8  _g_PUTPNT                          system
+     0000F3FA  _g_GETPNT                          system
+     0000F3FC  _g_CS120                           system
+     0000F401  _g_CS240                           system
+     0000F406  _g_LOW                             system
+     0000F408  _g_HIGH                            system
+     0000F40A  _g_HEADER                          system
+     0000F40B  _g_ASPCT1                          system
+     0000F40D  _g_ASPCT2                          system
+     0000F87F  _g_FNKSTR                          system
+     0000F92A  _g_CLOC                            system
+     0000F92C  _g_CMASK                           system
+     0000F959  _g_QUETAB                          system
+     0000F971  _g_QUEBAK                          system
+     0000F975  _g_VOICAQ                          system
+     0000F9F5  _g_VOICBQ                          system
+     0000FA75  _g_VOICCQ                          system
+     0000FAF5  _g_DPPAGE                          system
+     0000FAF5  _g_RS2IQ                           system
+     0000FAF6  _g_ACPAGE                          system
+     0000FAF7  _g_AVCSAV                          system
+     0000FAF8  _g_EXBRSA                          system
+     0000FAF9  _g_CHRCNT                          system
+     0000FAFA  _g_ROMA                            system
+     0000FAFC  _g_MODE                            system
+     0000FAFD  _g_NORUSE                          system
+     0000FAFE  _g_XSAVE                           system
+     0000FB00  _g_YSAVE                           system
+     0000FB02  _g_LOGOPR                          system
+     0000FB03  _g_RSTMP                           system
+     0000FB03  _g_TOCNT                           system
+     0000FB04  _g_RSFCB                           system
+     0000FB06  _g_RSIQLN                          system
+     0000FB07  _g_MEXBIh                          system
+     0000FB0C  _g_OLDINT                          system
+     0000FB0C  _g_OLDSTT                          system
+     0000FB16  _g_DEVNUM                          system
+     0000FB17  _g_DATCNT                          system
+     0000FB1A  _g_ERRORS                          system
+     0000FB1B  _g_FLAGS                           system
+     0000FB1C  _g_ESTBLS                          system
+     0000FB1D  _g_COMMSK                          system
+     0000FB1E  _g_LSTCOM                          system
+     0000FB1F  _g_LSTMOD                          system
+     0000FB35  _g_PRSCNT                          system
+     0000FB36  _g_SAVSP                           system
+     0000FB38  _g_VOICEN                          system
+     0000FB39  _g_SAVVOL                          system
+ASxxxx Linker V05.50.4-SDLD,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     0000FB3B  _g_MCLLEN                          system
+     0000FB3C  _g_MCLPTR                          system
+     0000FB3E  _g_QUEUEN                          system
+     0000FB3F  _g_MUSICF                          system
+     0000FB40  _g_PLYCNT                          system
+     0000FB41  _g_VCBA                            system
+     0000FB66  _g_VCBB                            system
+     0000FB8B  _g_VCBC                            system
+     0000FBB0  _g_ENSTOP                          system
+     0000FBB1  _g_BASROM                          system
+     0000FBB2  _g_LINTTB                          system
+     0000FBCA  _g_FSTPOS                          system
+     0000FBCC  _g_CODSAV                          system
+     0000FBCD  _g_FNKSWI                          system
+     0000FBCE  _g_FNKFLG                          system
+     0000FBD8  _g_ONGSBF                          system
+     0000FBD9  _g_CLIKFL                          system
+     0000FBDA  _g_OLDKEY                          system
+     0000FBE5  _g_NEWKEY                          system
+     0000FBF0  _g_KEYBUF                          system
+     0000FC18  _g_LINWRK                          system
+     0000FC40  _g_PATWRK                          system
+     0000FC48  _g_BOTTOM                          system
+     0000FC4A  _g_HIMEM                           system
+     0000FC4C  _g_TRPTBL                          system
+     0000FC9A  _g_RTYCNT                          system
+     0000FC9B  _g_INTFLG                          system
+     0000FC9C  _g_PADY                            system
+     0000FC9D  _g_PADX                            system
+     0000FC9E  _g_JIFFY                           system
+     0000FCA0  _g_INTVAL                          system
+     0000FCA2  _g_INTCNT                          system
+     0000FCA4  _g_LOWLIM                          system
+     0000FCA5  _g_WINWID                          system
+     0000FCA6  _g_GRPHED                          system
+     0000FCA7  _g_ESCCNT                          system
+     0000FCA8  _g_INSFLG                          system
+     0000FCA9  _g_CSRSW                           system
+     0000FCAA  _g_CSTYLE                          system
+     0000FCAB  _g_CAPST                           system
+     0000FCAC  _g_KANAST                          system
+     0000FCAD  _g_KANAMD                          system
+     0000FCAE  _g_FLBMEM                          system
+     0000FCAF  _g_SCRMOD                          system
+     0000FCB0  _g_OLDSCR                          system
+     0000FCB1  _g_CASPRV                          system
+     0000FCB2  _g_BRDATR                          system
+     0000FCB3  _g_GXPOS                           system
+     0000FCB5  _g_GYPOS                           system
+     0000FCB7  _g_GRPACX                          system
+     0000FCB9  _g_GRPACY                          system
+ASxxxx Linker V05.50.4-SDLD,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     0000FCBB  _g_DRWFLG                          system
+     0000FCBC  _g_DRWSCL                          system
+     0000FCBD  _g_DRWANG                          system
+     0000FCC1  _g_EXPTBL                          system
+     0000FCC1  _g_MNROM                           system
+     0000FCC5  _g_SLTTBL                          system
+     0000FCC9  _g_SLTATR                          system
+     0000FD09  _g_SLTWRK                          system
+     0000FD89  _g_PROCNM                          system
+     0000FFE7  _g_RG08SAV                         system
+     0000FFE8  _g_RG09SAV                         system
+     0000FFE9  _g_RG10SAV                         system
+     0000FFEA  _g_RG11SAV                         system
+     0000FFEB  _g_RG12SAV                         system
+     0000FFEC  _g_RG13SAV                         system
+     0000FFED  _g_RG14SAV                         system
+     0000FFEE  _g_RG15SAV                         system
+     0000FFEF  _g_RG16SAV                         system
+     0000FFF0  _g_RG17SAV                         system
+     0000FFF1  _g_RG18SAV                         system
+     0000FFF2  _g_RG19SAV                         system
+     0000FFF3  _g_RG20SAV                         system
+     0000FFF4  _g_RG21SAV                         system
+     0000FFF5  _g_RG22SAV                         system
+     0000FFF6  _g_RG23SAV                         system
+     0000FFF7  _g_MINROM                          system
+     0000FFF8  _g_SVFFF8                          system
+     0000FFFA  _g_RG25SAV                         system
+     0000FFFB  _g_RG26SAV                         system
+     0000FFFC  _g_RG27SAV                         system
+     0000FFFD  _g_SVFFFD                          system
+     0000FFFF  _g_SLTSL                           system
+
+ASxxxx Linker V05.50.4-SDLD,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_CODE                               00000100    00006B60 =       27488. bytes (REL,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     00000100  _g_FirstAddr                       crt0
+     00000100  _g_HeaderAddr                      crt0
+     00000102  _g_AppSignature                    crt0
+     0000010A  crt0_init_globals                  crt0
+     00000184  _LoadSystemFont                    antipiracyscreen
+     0000020E  _Flags                             antipiracyscreen
+     0000288E  _Flags_palette                     antipiracyscreen
+     000028A4  _Dopefish                          antipiracyscreen
+     000033E4  _Dopefish_palette                  antipiracyscreen
+     000033FA  _main                              antipiracyscreen
+     0000383E  _VDP_SetModeFlag                   vdp
+     00003867  _VDP_SetModeText1                  vdp
+     0000387D  _VDP_SetModeMultiColor             vdp
+     000038A5  _VDP_SetModeGraphic1               vdp
+     000038D5  _VDP_SetModeGraphic2               vdp
+     00003906  _VDP_ClearVRAM                     vdp
+     00003941  _VDP_WriteVRAM_16K                 vdp
+     00003978  _VDP_FillVRAM_16K                  vdp
+     0000399D  _VDP_ReadVRAM_16K                  vdp
+     000039D3  _VDP_Peek_16K                      vdp
+     000039E8  _VDP_Poke_16K                      vdp
+     00003A00  _VDP_SetModeText2                  vdp
+     00003A1F  _VDP_SetModeGraphic3               vdp
+     00003A50  _VDP_SetModeGraphic4               vdp
+     00003A6F  _VDP_SetModeGraphic5               vdp
+     00003A8E  _VDP_SetModeGraphic6               vdp
+     00003AAD  _VDP_SetModeGraphic7               vdp
+     00003ACC  _VDP_ReadStatus                    vdp
+     00003AE0  _VDP_SetAdjustOffset               vdp
+     00003AE9  _VDP_SetPalette                    vdp
+     00003AFA  _VDP_SetPaletteEntry               vdp
+     00003B0D  _VDP_WriteVRAM_128K                vdp
+     00003B50  _VDP_FillVRAM_128K                 vdp
+     00003B8B  _VDP_ReadVRAM_128K                 vdp
+     00003BD3  _VDP_Poke_128K                     vdp
+     00003BFE  _VDP_Peek_128K                     vdp
+     00003C21  _VDP_CommandWait                   vdp
+     00003C3A  _VDP_CommandSetupR32               vdp
+     00003C6D  _VDP_CommandSetupR36               vdp
+     00003C98  _VDP_CommandWriteLoop              vdp
+     00003CC0  _VDP_Initialize                    vdp
+     00003CDC  _VDP_SetMode                       vdp
+     00003DCB  _VDP_GetVersion                    vdp
+     00003E1A  _VDP_RegWrite                      vdp
+     00003E26  _VDP_RegWriteBak                   vdp
+     00003E39  _VDP_RegWriteBakMask               vdp
+     00003E5C  _VDP_ReadDefaultStatus             vdp
+     00003E5F  _VDP_SetPage                       vdp
+     00003E6C  _VDP_SetLayoutTable                vdp
+     00003ECC  _VDP_SetColorTable                 vdp
+ASxxxx Linker V05.50.4-SDLD,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_CODE                               00000100    00006B60 =       27488. bytes (REL,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     00003F6C  _VDP_SetPatternTable               vdp
+     00003FC9  _VDP_SetSpriteAttributeTable       vdp
+     00004051  _VDP_SetSpritePatternTable         vdp
+     0000406D  _VDP_LoadSpritePattern             vdp
+     0000409D  _VDP_SetSpriteSM1                  vdp
+     000040DA  _VDP_SetSprite                     vdp
+     00004114  _VDP_SetSpriteExMultiColor         vdp
+     00004177  _VDP_SetSpriteExUniColor           vdp
+     000041D7  _VDP_SetSpritePosition             vdp
+     00004209  _VDP_SetSpritePositionX            vdp
+     00004220  _VDP_SetSpritePositionY            vdp
+     00004236  _VDP_SetSpritePattern              vdp
+     0000424E  _VDP_SetSpriteColorSM1             vdp
+     00004268  _VDP_SetSpriteUniColor             vdp
+     00004284  _VDP_SetSpriteMultiColor           vdp
+     000042A2  _VDP_SetSpriteData                 vdp
+     000042BE  _VDP_DisableSpritesFrom            vdp
+     000042CF  _VDP_SetBlinkTile                  vdp
+     0000431A  _g_VDPBitValue                     vdp
+     00004322  _VDP_LoadPattern_GM2               vdp
+     00004394  _VDP_LoadColor_GM2                 vdp
+     00004406  _VDP_WriteLayout_GM2               vdp
+     00004495  _VDP_FillLayout_GM2                vdp
+     000044DD  _BIOS_Exit                         bios
+     00004507  _BIOS_SetHookCallback              bios
+     00004524  _BIOS_InterSlotRead                bios
+     0000452A  _BIOS_InterSlotWrite               bios
+     00004540  _BIOS_InterSlotCall                bios
+     00004552  _BIOS_SwitchSlot                   bios
+     0000455E  _BIOS_WriteVDP                     bios
+     00004564  _BIOS_WriteVRAM                    bios
+     00004569  _BIOS_FillVRAM                     bios
+     0000457A  _BIOS_CopyFromVRAM                 bios
+     0000458C  _BIOS_CopyToVRAM                   bios
+     0000459E  _BIOS_InitScreen3Ex                bios
+     000045E9  _BIOS_GetSpritePatternAddress      bios
+     000045EE  _BIOS_GetSpriteAttributeAddress    bios
+     000045F3  _BIOS_WritePSG                     bios
+     000045F8  _BIOS_PlayPSG                      bios
+     00004615  _BIOS_HasCharacter                 bios
+     0000461F  _BIOS_ClearScreen                  bios
+     00004624  _BIOS_TextSetCursor                bios
+     00004629  _Draw_Line                         draw
+     000046F1  _Draw_LineH                        draw
+     0000475C  _Draw_LineV                        draw
+     0000481F  _Draw_Box                          draw
+     00004884  _Draw_FillBox                      draw
+     000048ED  _Draw_Circle                       draw
+     00004A8C  _Print_SplitColor                  print
+     00004ABE  _g_HexChar                         print
+     00004ACE  _Print_MergeColor                  print
+ASxxxx Linker V05.50.4-SDLD,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_CODE                               00000100    00006B60 =       27488. bytes (REL,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     00004B20  _Print_Initialize                  print
+     00004C05  _Print_SetMode                     print
+     00004C8C  _Print_SetFont                     print
+     00004D65  _Print_InitColorBuffer             print
+     00004E83  _Print_SetColor                    print
+     00004F6F  _Print_SetColorShade               print
+     0000501B  _Print_ValidateChar                print
+     00005067  _Print_ValidatePattern             print
+     0000510D  _Print_SetBitmapFont               print
+     00005117  _DrawChar_8B                       print
+     00005229  _DrawChar_4B                       print
+     00005309  _DrawChar_2B                       print
+     000053C9  _DrawChar_Trans                    print
+     00005684  _Print_SetVRAMFont                 print
+     000057D6  _DrawChar_VRAM256                  print
+     00005930  _DrawChar_VRAM512                  print
+     00005A8A  _CopyNo8HeightFontData             print
+     00005ADC  _Print_SetTextFont                 print
+     00005C8A  _DrawChar_Layout                   print
+     00005CCE  _Print_SetSpriteFont               print
+     00005E17  _DrawChar_Sprite                   print
+     00005E3D  _Print_SetShadow                   print
+     00005E77  _Print_EnableShadow                print
+     00005E8E  _Print_SetOutline                  print
+     00005E99  _Print_EnableOutline               print
+     00005EB0  _Print_Clear                       print
+     00005F06  _Print_Backspace                   print
+     00005FEB  _Print_DrawChar                    print
+     00006028  _Print_DrawCharX                   print
+     0000603A  _Print_DrawText                    print
+     0000610D  _Print_DrawBin8                    print
+     0000612A  _Print_DrawHex8                    print
+     0000614C  _Print_DrawHex16                   print
+     00006156  _Print_DrawHex32                   print
+     00006161  _Print_DrawInt                     print
+     0000622B  _Print_DrawFormat                  print
+     00006967  _Print_DrawLineH                   print
+     00006986  _Print_DrawLineV                   print
+     000069B5  _Print_DrawBox                     print
+     00006A66  ___sdcc_call_hl                    
+     00006A67  _Input_Detect                      input
+     00006A84  _Joystick_Read                     input
+     00006A95  _Mouse_Read                        input
+     00006AFC  _Keyboard_Read                     input
+     00006B07  _Sys_GetPageSlot                   system
+     00006B5F  _Sys_SetPageSlot                   system
+     00006B60  _Sys_SetPage0Slot                  system
+     00006BA5  _Sys_CheckSlot                     system
+     00006C09  __moduchar                         modunsigned
+     00006C10  __moduint                          modunsigned
+     00006C15  __divuchar                         divunsigned
+ASxxxx Linker V05.50.4-SDLD,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_CODE                               00000100    00006B60 =       27488. bytes (REL,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     00006C17  __divu8                            divunsigned
+     00006C1A  __divu16                           divunsigned
+     00006C1A  __divuint                          divunsigned
+     00006C49  __mulint                           mul
+     00006C4B  __mul16                            mul
+
+ASxxxx Linker V05.50.4-SDLD,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_HOME                               00006C60    00000222 =         546. bytes (REL,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     00006C60  __modslong                         _modslong
+     00006CE8  __modulong                         _modulong
+     00006D6F  __divslong                         _divslong
+     00006DFF  __divulong                         _divulong
+
+ASxxxx Linker V05.50.4-SDLD,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_INITIALIZER                        00006E82    0000000F =          15. bytes (REL,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+ASxxxx Linker V05.50.4-SDLD,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_GSFINAL                            00006E91    00000000 =           0. bytes (REL,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     00006E91  _g_LastAddr                        crt0
+
+ASxxxx Linker V05.50.4-SDLD,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_DATA                               00006E91    00000883 =        2179. bytes (REL,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     00006E91  _g_HeapStartAddress                crt0
+     00007693  _g_VDP_REGSAV                      vdp
+     000076AF  _g_VDP_Data                        vdp
+     000076B1  _g_VDP_Command                     vdp
+     000076C0  _g_VDP_Sprite                      vdp
+     000076C4  _g_ScreenLayoutLow                 vdp
+     000076C6  _g_ScreenColorLow                  vdp
+     000076C8  _g_ScreenPatternLow                vdp
+     000076CA  _g_SpriteAttributeLow              vdp
+     000076CC  _g_SpritePatternLow                vdp
+     000076CE  _g_SpriteColorLow                  vdp
+     000076D0  _g_ScreenLayoutHigh                vdp
+     000076D1  _g_ScreenColorHigh                 vdp
+     000076D2  _g_ScreenPatternHigh               vdp
+     000076D3  _g_SpriteAttributeHigh             vdp
+     000076D4  _g_SpritePatternHigh               vdp
+     000076D5  _g_SpriteColorHigh                 vdp
+     000076D6  _g_PrintData                       print
+     00007711  _g_Mouse_OffsetX                   input
+     00007712  _g_Mouse_OffsetY                   input
+     00007713  _g_Mouse_Buttons                   input
+ASxxxx Linker V05.50.4-SDLD,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_INITIALIZED                        00007714    0000000F =          15. bytes (REL,CON)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+     00007714  _state                             antipiracyscreen
+     00007715  _stateTimer                        antipiracyscreen
+     00007717  _frame                             antipiracyscreen
+     00007718  _timer                             antipiracyscreen
+     00007719  _flagY                             antipiracyscreen
+     0000771A  _g_VDPInitilized                   vdp
+     0000771B  _g_PrintInvalid                    print
+
+ASxxxx Linker V05.50.4-SDLD,  page 15.
+
+Files Linked                              [ module(s) ]
+
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\projects\antipiracyscreen/out/crt0_dos.rel
+                                          [ crt0 ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\projects\antipiracyscreen/out/antipiracyscreen.rel
+                                          [ antipiracyscreen ]
+
+
+Libraries Linked                          [ object file ]
+
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\projects\antipiracyscreen/out/msxgl.lib
+                                          [ vdp.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\projects\antipiracyscreen/out/msxgl.lib
+                                          [ bios.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\projects\antipiracyscreen/out/msxgl.lib
+                                          [ draw.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\projects\antipiracyscreen/out/msxgl.lib
+                                          [ print.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\tools/sdcc/lib/z80/z80.lib
+                                          [ _modslong.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\tools/sdcc/lib/z80/z80.lib
+                                          [ _modulong.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\tools/sdcc/lib/z80/z80.lib
+                                          [ _divslong.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\tools/sdcc/lib/z80/z80.lib
+                                          [ _divulong.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\tools/sdcc/lib/z80/z80.lib
+                                          [ __sdcc_call_hl.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\projects\antipiracyscreen/out/msxgl.lib
+                                          [ input.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\projects\antipiracyscreen/out/msxgl.lib
+                                          [ system.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\tools/sdcc/lib/z80/z80.lib
+                                          [ modunsigned.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\tools/sdcc/lib/z80/z80.lib
+                                          [ divunsigned.rel ]
+C:\Users\Jummy\Downloads\MSXgl-1.5.0b\tools/sdcc/lib/z80/z80.lib
+                                          [ mul.rel ]
+
+ASxxxx Linker V05.50.4-SDLD,  page 16.
+
+User Base Address Definitions
+
+_CODE = 0x0100
+_DATA = 0x0000
+
+
