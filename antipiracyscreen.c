@@ -14,6 +14,7 @@
 #include "print.h"
 #include "content/flags.h"
 #include "content/dopefish.h"
+#include "content/logo.h"
 #include "draw.h"
 
 //=============================================================================
@@ -95,6 +96,16 @@ void main()
             0xAC00 + ((u16)y * 128),
             0,
             40
+        );
+    }
+
+    for(u8 y = 0; y < 8; y++)
+    {
+        VDP_WriteVRAM(
+            Logo + ((u16)y * 16),
+            0xD000 + ((u16)y * 128),
+            0,
+            16
         );
     }
 
