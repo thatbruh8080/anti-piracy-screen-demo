@@ -1,5 +1,5 @@
 # Anti piracy screen demo
-An anti piracy screen demo developed with MSXgl in Screen 5 for MSX2 making use of the VDP command engine, or to be precise HMMM (High speed move from VRAM to VRAM). So the jolly roger flag's software sprites so to speak. Unauthorized copying and editing is encouraged
+An anti piracy screen demo developed with MSXgl in Screen 5 for MSX2 making use of the VDP command engine, or to be precise HMMM (High speed move from VRAM to VRAM). So the jolly roger flag's software sprites so to speak. Unauthorized copying and editing is encouraged for your own projects. Preferrably displayed on startup or after whatever copy protection measure you used happened on a pirated copy.
 
 <div>
   <img src="./datasrc/DOS2_antipiracyscreen.png" alt="screenshot" title="screenshot"/>
