@@ -265,7 +265,7 @@ void main()
 
             case NOQUARTER_STAYS:
 
-                // Supa boring, keeps waving the red flag on top for eternity unless you press exit
+                // Supa boring, keeps waving the red flag on top for eternity unless the user presses esc. Either resets or quits to whatever operating system used to launch it
                 // While that happens DEVELOPERS ASSEMBLE! EN GARDE RAAAAAAA- (offscreen cuz too violent to program)
                 VDP_CommandHMMM((u16)frame * 56, 300, 88, 56, 56, 44);
 
