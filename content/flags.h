@@ -4,6 +4,7 @@
 // ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀          ▀▀
 // Data generated using MSXimg 1.22.1 on Sat Sep  5 17:02:21 2026
 // by Guillaume "Aoineko" Blanchard (2022) under CC BY-SA free license
+// Skull nicked from Eindeloos by Radarsoft. The crossbones, not
 // ─────────────────────────────────────────────────────────────────────────────
 // Generation parameters:
 //  - Input file:     vdppage.png
