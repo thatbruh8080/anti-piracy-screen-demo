@@ -4,7 +4,7 @@
 // █  █ █  ▀▀  ▄█  █  █ ▀▄█ █▄ │  █ ██ ██ █ ▀█▄▄ ██    ██▀  ██ ██   ▀▄██ ▀█▄   ██   ▄██  ▀█▄  ██   ▀█▄▄ ▀█▄▄ ██ █
 // ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀────────┘                       ▀▀                     ▀▀                                 
 //  Anti piracy screen and V9938 command set demo. Unauthorized copying is encouraged!                           
-//────────────────────────────────────────────────────────────────────────────────────                           
+//────────────────────────────────────────────────────────────────────────────────────                                           
 
 //=============================================================================
 // INCLUDES
@@ -21,11 +21,11 @@
 // VARIABLES & STATE MACHINES
 //=============================================================================
 enum {
-    FLAG_BLACK_WAIT,     // Black flag gets shown
-    FLAG_BLACK_LOWERS,   // Then it lowers
-    WAIT_A_SEC,          // Suspens-
-    NOQUARTER_RISES,     // The no quarter flag rises
-    NOQUARTER_STAYS,     // And it stays there. You know what that means.....
+    FLAG_BLACK_WAIT,    // Black flag gets shown
+    FLAG_BLACK_LOWERS,  // Then it lowers
+    WAIT_A_SEC,         // Suspens-
+    NOQUARTER_RISES,    // The no quarter flag rises
+    NOQUARTER_STAYS,    // And it stays there. You know what that means.....
 
 };
 
@@ -39,8 +39,10 @@ u8 flagY = 56;
 // SYSTEM FONT (so the message won't look like garbage in DOS)
 //=============================================================================
 
+#define FONT_FIRST 32
+#define FONT_LAST  126
 // RAM copy of the MSX system font
-static u8 g_SystemFont[256 * 8];
+static u8 g_SystemFont[(FONT_LAST - FONT_FIRST + 1) * 8];
 
 void LoadSystemFont()
 {
@@ -48,18 +50,18 @@ void LoadSystemFont()
     u8 slot = *((u8*)0xF91F);
     u16 addr = *((u16*)0xF920);
 
-    // Copy all 256 8-byte characters from the ROM slot into normal RAM
+    // Copy the 95 printable ASCII 8-byte characters from the ROM slot into normal RAM
     for(u16 i = 0; i < sizeof(g_SystemFont); ++i)
     {
-        g_SystemFont[i] = BIOS_InterSlotRead(slot, addr + i);
+        g_SystemFont[i] = BIOS_InterSlotRead(slot, addr + FONT_FIRST * 8 + i);
     }
 
     // Characters are stored as 8x8 bitmaps but printed 6 pixels wide
     Print_SetFontEx(
         8, 8,
         6, 8,
-        1, 255,
-        g_SystemFont + 8
+        FONT_FIRST, FONT_LAST,
+        g_SystemFont
     );
 
     // We're gonna DRAW TEXT ANYWHERE WE WANT ON THE BITMAP WOO
@@ -67,6 +69,37 @@ void LoadSystemFont()
     Print_Initialize();
 }
 
+void ShowMSX1Message()
+{
+    static const u8 message[] = "This demo requires MSX2/2+/turbo R";
+    static const u8 spared[] = "You're spared lol";
+
+    g_TXTNAM = 0x0000;
+    g_TXTCGP = 0x0800;
+    g_LINL40 = 40;
+    g_LINLEN = 40;
+    Poke(M_SCRMOD, 0);
+    BIOS_SetColor(15, 4, 4); 
+
+    BIOS_InterSlotCall(g_EXPTBL[0], R_INITXT);
+    VDP_FillVRAM_16K(' ', g_TXTNAM, 40 * 24);
+    VDP_WriteVRAM_16K(message, g_TXTNAM, sizeof(message) - 1);
+    VDP_WriteVRAM_16K(spared, g_TXTNAM + 40 * 2, sizeof(spared) - 1);
+
+    while(!Keyboard_IsKeyPressed(KEY_ESC))
+        Halt();
+}
+
+void UploadRows(const u8* source, u16 destination, u8 width, u8 height)
+{
+
+    while(height--)
+    {
+        VDP_WriteVRAM(source, destination, 0, width);
+        source += width;
+        destination += 128;
+    }
+}
 
 //=============================================================================
 // MAIN LOOP
@@ -76,6 +109,14 @@ void LoadSystemFont()
 // Program entry point
 void main()
 {
+
+    if(BIOS_InterSlotRead(g_EXPTBL[0], R_MSXVER) == 0)
+    {
+        ShowMSX1Message();
+        BIOS_Exit(0);
+        return;
+    }
+
     // Allat video setup, pretty much self explanatory
     VDP_SetMode(VDP_MODE_SCREEN5);
     VDP_EnableVBlank(TRUE);
@@ -87,37 +128,11 @@ void main()
     VDP_SetBackdropColor(2);
 
     // Writes the flag frames into offscreen VRAM
-    for(u8 y = 0; y < 88; y++)
-    {
-        VDP_WriteVRAM(
-            Flags + ((u16)y * 112),
-            0x8000 + ((u16)y * 128),
-            0,
-            112
-        );
-    }
-
+    UploadRows(Flags,    0x8000, 112, 88);
     // Writes some stupid green fish into offscreen VRAM
-    for(u8 y = 0; y < 72; y++)
-    {
-        VDP_WriteVRAM(
-            Dopefish + ((u16)y * 40),
-            0xAC00 + ((u16)y * 128),
-            0,
-            40
-        );
-    }
-
+    UploadRows(Dopefish, 0xAC00,  40, 72);
     // Writes the MSXgl logo into offscreen VRAM
-    for(u8 y = 0; y < 8; y++)
-    {
-        VDP_WriteVRAM(
-            Logo + ((u16)y * 16),
-            0xD000 + ((u16)y * 128),
-            0,
-            16
-        );
-    }
+    UploadRows(Logo,     0xD000,  16,  8);
 
     // Draws the pole
     Draw_FillBox(85, 56, 155, 200, 1, VDP_OP_IMP);
@@ -150,11 +165,8 @@ void main()
         {
             timer = 0;
 
-            frame++;
-
             // Loops back after the fourth frame
-            if(frame >= 4)
-                frame = 0;
+            frame = (frame + 1) & 3; 
 
         }
 
@@ -178,7 +190,6 @@ void main()
 
                 break;
 
-
             case FLAG_BLACK_LOWERS:
             {
                 // Remembers where the flag was last frame
@@ -190,12 +201,7 @@ void main()
                 flagY++;
 
                 // Clips the flag as it goes down the screen
-                if(flagY >= 201)
-                    newHeight = 0;
-                else if(flagY + 44 > 201)
-                    newHeight = 201 - flagY;
-                else
-                    newHeight = 44;
+                newHeight = (flagY > 157) ? 201 - flagY : 44;
 
                 // Draws whatever part of the flag is still on screen
                 if(newHeight > 0)
@@ -229,7 +235,6 @@ void main()
 
                 break;
 
-
             case NOQUARTER_RISES:
             {
                 // Remembers where the flag was last frame
@@ -241,11 +246,8 @@ void main()
                 flagY--;
 
                 // Clips the flag while it comes up from below
-                if(flagY + 44 > 201)
-                    newHeight = 201 - flagY;
-                else
-                    newHeight = 44;
-                
+                newHeight = (flagY > 157) ? 201 - flagY : 44;
+
                 // Copies the visible part of the no quarter flag onto the screen
                 VDP_CommandHMMM((u16)frame * 56, 300, 88, flagY, 56, newHeight);
 
@@ -272,6 +274,7 @@ void main()
                 break;
         }
     }
+
     // Calls the BIOS to exit the program
     BIOS_Exit(0);
 }
