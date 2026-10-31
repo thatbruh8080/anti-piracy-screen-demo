@@ -69,11 +69,17 @@ void LoadSystemFont()
     Print_Initialize();
 }
 
+//=============================================================================
+// MSX GENERATION CHECK
+//=============================================================================
+
 void ShowMSX1Message()
 {
+    // Message proving ur merciful
     static const u8 message[] = "This demo requires MSX2/2+/turbo R";
     static const u8 spared[] = "You're spared lol";
 
+    // Initialize screen mode ß
     g_TXTNAM = 0x0000;
     g_TXTCGP = 0x0800;
     g_LINL40 = 40;
@@ -82,7 +88,9 @@ void ShowMSX1Message()
     BIOS_SetColor(15, 4, 4); 
 
     BIOS_InterSlotCall(g_EXPTBL[0], R_INITXT);
+    // Fills video ram with the space character
     VDP_FillVRAM_16K(' ', g_TXTNAM, 40 * 24);
+    // Prints merciful message
     VDP_WriteVRAM_16K(message, g_TXTNAM, sizeof(message) - 1);
     VDP_WriteVRAM_16K(spared, g_TXTNAM + 40 * 2, sizeof(spared) - 1);
 
