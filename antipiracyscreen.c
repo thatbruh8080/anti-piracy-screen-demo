@@ -75,11 +75,11 @@ void LoadSystemFont()
 
 void ShowMSX1Message()
 {
-    // Message proving ur merciful
+    // "But I am a merciful man" - Fire Lord Ozai
     static const u8 message[] = "This demo requires MSX2/2+/turbo R";
     static const u8 spared[] = "You're spared lol";
 
-    // Initialize screen mode ß
+    // Initialize screen mode 0, 40 columns
     g_TXTNAM = 0x0000;
     g_TXTCGP = 0x0800;
     g_LINL40 = 40;
