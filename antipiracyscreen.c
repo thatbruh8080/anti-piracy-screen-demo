@@ -70,12 +70,13 @@ void LoadSystemFont()
 }
 
 //=============================================================================
-// MSX GENERATION CHECK
+// GENERATION CHECK
 //=============================================================================
 
+// Checks whether you're using an MSX1 or MSX2/2+/turbo R
 void ShowMSX1Message()
 {
-    // "But I am a merciful man" - Fire Lord Ozai
+    // "But I am a merciful man" -Fire Lord Ozai
     static const u8 message[] = "This demo requires MSX2/2+/turbo R";
     static const u8 spared[] = "You're spared lol";
 
