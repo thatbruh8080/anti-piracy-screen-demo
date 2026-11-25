@@ -276,7 +276,7 @@ void main()
 
             case NOQUARTER_STAYS:
 
-                // Supa boring, keeps waving the red flag on top for eternity unless the user presses esc. Either resets or quits to whatever operating system used to launch it
+                // Supa boring, keeps waving the red flag on top for eternity unless you press ESC. Either resets (cartridge ROM) or quits to whatever DOS was used to launch it (MSX-DOS disks)
                 // While that happens DEVELOPERS ASSEMBLE! EN GARDE RAAAAAAA- (offscreen cuz too violent to program)
                 VDP_CommandHMMM((u16)frame * 56, 300, 88, 56, 56, 44);
 
@@ -284,6 +284,6 @@ void main()
         }
     }
 
-    // Calls the BIOS to exit the program
+    // Calls the BIOS to call it quits
     BIOS_Exit(0);
 }
